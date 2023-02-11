@@ -10,3 +10,4 @@ function getFullName(firstName, lastName){
 const mGreetings = `Hello ${getFullName(firstName, lastName)}`;
 
 console.log(mGreetings);
+
