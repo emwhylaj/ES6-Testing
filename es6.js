@@ -53,27 +53,66 @@
 
 //Destructuring
 
-const name = "James Olawale Olalekan";
+// const name = "James Olawale Olalekan";
 
-const nameArr = name.split(' ');
-console.log(nameArr);
+// const nameArr = name.split(' ');
+// console.log(nameArr);
 
-// let name1 = nameArr[0];
-// let name2 = nameArr[1];
-let [name1, name2] = nameArr;
+// // let name1 = nameArr[0];
+// // let name2 = nameArr[1];
+// let [name1, name2] = nameArr;
 
-console.log(name1);
-console.log(name2);
+// console.log(name1);
+// console.log(name2);
 
 
-const person ={
-    firstName : 'Muyiwa',
-    middleName : 'Olawale',
-    lastName : 'Olalekan',
-    age : 35
-}
+// const person ={
+//     firstName : 'Muyiwa',
+//     middleName : 'Olawale',
+//     lastName : 'Olalekan',
+//     age : 35
+// }
 
-let {firstName, lastName} = person;
+// let {firstName, lastName} = person;
 
-console.log(firstName);
-console.log(lastName);
+// console.log(firstName);
+// console.log(lastName);
+
+//Array Function : map()
+
+ //const mArr = [1,2,3,4,5];
+
+ const mArr = [{
+    name: 'Jake Loius',
+    experience : 10,
+    type: 'commercial'
+ },{
+    name: 'John Doe',
+    experience : 5,
+    type: 'private'
+ },
+ {
+    name: 'Jame Jaden',
+    experience : 20,
+    type: 'commercial'
+ }
+]
+
+// let newArr = [];
+
+// const doubleValues = (item) => {
+//     return item * 2
+// }
+
+// for(let i =0; i < mArr.length; i++){
+//     newArr.push(doubleValues(mArr[i]));
+// }
+
+let newArr = mArr.map((data, pos) => {
+
+    console.log(`Item at pos: ${pos} is ${data}`);
+    console.log(data);
+    return data * 2;
+})
+
+console.log(newArr);
