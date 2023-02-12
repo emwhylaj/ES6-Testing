@@ -21,18 +21,32 @@ const greetings = (name, age) =>{
 
 //Rest and Spread Operator
 
-//const mSum = (num1, num2) => console.log(num1 + num2);
+// //const mSum = (num1, num2) => console.log(num1 + num2);
 
-const mSum = (num1, num2, ... args) => {
-    console.log(num1);
-    console.log(num2);
-    console.log(args);
-    let sum = num1 + num2;
-    for(i = 0;i < args.length; i++){
-        sum += args[i];
-    }
+// const mSum = (num1, num2, ... args) => {
+//     console.log(num1);
+//     console.log(num2);
+//     console.log(args);
+//     let sum = num1 + num2;
+//     for(i = 0;i < args.length; i++){
+//         sum += args[i];
+//     }
 
-    console.log(sum)
+//     console.log(sum)
+// }
+
+// mSum(1,2,3,4,5,6,7);
+
+//Spread Operator
+
+let mObj1 = {
+    name: 'Muyiwa'
 }
 
-mSum(1,2,3,4,5,6,7);
+let mObj2 = {
+    age: 35
+}
+
+let mObj3 = {...mObj1, ...mObj2}
+
+console.log(mObj3);
