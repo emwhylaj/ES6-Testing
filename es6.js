@@ -1,21 +1,21 @@
 //template strings
 
-const firstName = 'Muyiwa';
-const lastName = 'Olalekan';
+// const firstName = 'Muyiwa';
+// const lastName = 'Olalekan';
 
-function getFullName(firstName, lastName){
-    return `${firstName} ${lastName}`;
-}
+// function getFullName(firstName, lastName){
+//     return `${firstName} ${lastName}`;
+// }
 
-const mGreetings = `Hello ${getFullName(firstName, lastName)}`;
+// const mGreetings = `Hello ${getFullName(firstName, lastName)}`;
 
 //console.log(mGreetings);
 
 //arrow functions
 
-const greetings = (name, age) =>{
-    return `Welcome ${name} ${age}`;
-}
+//const greetings = (name, age) =>{
+//     return `Welcome ${name} ${age}`;
+// }
 
 //console.log(greetings('Muyiwa', 35));
 
@@ -39,14 +39,41 @@ const greetings = (name, age) =>{
 
 //Spread Operator
 
-let mObj1 = {
-    name: 'Muyiwa'
+// let mObj1 = {
+//     name: 'Muyiwa'
+// }
+
+// let mObj2 = {
+//     age: 35
+// }
+
+// let mObj3 = {...mObj1, ...mObj2}
+
+//console.log(mObj3);
+
+//Destructuring
+
+const name = "James Olawale Olalekan";
+
+const nameArr = name.split(' ');
+console.log(nameArr);
+
+// let name1 = nameArr[0];
+// let name2 = nameArr[1];
+let [name1, name2] = nameArr;
+
+console.log(name1);
+console.log(name2);
+
+
+const person ={
+    firstName : 'Muyiwa',
+    middleName : 'Olawale',
+    lastName : 'Olalekan',
+    age : 35
 }
 
-let mObj2 = {
-    age: 35
-}
+let {firstName, lastName} = person;
 
-let mObj3 = {...mObj1, ...mObj2}
-
-console.log(mObj3);
+console.log(firstName);
+console.log(lastName);
