@@ -118,15 +118,27 @@ let newArr = mArr.map((data, pos) => {
 //console.log(newArr);
 
 
-//Array function
+//Arrow function: reduce()
 
- const numArr = [1, 2, 3, 4, 5];
+//  const numArr = [1, 2, 3, 4, 5];
 
- const result = numArr.reduce((acc, item) =>{
+//  const result = numArr.reduce((acc, item) =>{
     //console.log(item);
 
     //console.log(acc);
-    return acc + item
- },0)
+//     return acc + item
+//  },0)
 
- console.log(result)
+ //console.log(result)
+
+
+ //Arrow function: filter()
+
+ const numArr = [1,2,3,4,5,6,7];
+
+ const resultArr = numArr.filter(item => {
+    //console.log(item);
+    return item % 2 === 0;
+ })
+
+ console.log(resultArr)
