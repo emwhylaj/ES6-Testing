@@ -134,11 +134,25 @@ let newArr = mArr.map((data, pos) => {
 
  //Arrow function: filter()
 
- const numArr = [1,2,3,4,5,6,7];
+//  const numArr = [1,2,3,4,5,6,7];
 
- const resultArr = numArr.filter(item => {
-    //console.log(item);
-    return item % 2 === 0;
- })
+//  const resultArr = numArr.filter(item => {
+//     //console.log(item);
+//     return item % 2 === 0;
+//  })
 
- console.log(resultArr)
+//  console.log(resultArr)
+
+//Arrow function: find() and findIndex()
+
+const numArr = [-1, -2, -3, -4, 1, 2, 3, 4]
+
+// const result = numArr.find(item => {
+//     return item % 2 === 0 && item >= 0;
+// })
+
+const result = numArr.findIndex(item => {
+    return item % 2 !== 0 && item >= 0;
+})
+
+console.log('Result =>', result);
