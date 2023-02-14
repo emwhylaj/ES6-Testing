@@ -185,32 +185,53 @@ let newArr = mArr.map((data, pos) => {
 
 //Inheritance in ES6
 
-class Person{
-    constructor(name, birthYear){
-        this.name = name;
-        this.yearOfBirth = birthYear;
-    }
+// class Person{
+//     constructor(name, birthYear){
+//         this.name = name;
+//         this.yearOfBirth = birthYear;
+//     }
 
-    getDetails = () => {
-        return `Name: ${this.name } and Age: ${2023 - this.yearOfBirth}`
-    }
-}
+//     getDetails = () => {
+//         return `Name: ${this.name } and Age: ${2023 - this.yearOfBirth}`
+//     }
+// }
 
-class Pilot extends Person{
-    constructor(name, birthYear, exp, type, license){
-        super(name, birthYear);
-        this.experience = exp;
-        this.type = type;
-        this.license = license;
-    }
+// class Pilot extends Person{
+//     constructor(name, birthYear, exp, type, license){
+//         super(name, birthYear);
+//         this.experience = exp;
+//         this.type = type;
+//         this.license = license;
+//     }
 
-    getData = () =>{
-        console.log(`${this.getDetails()} and Experience ${this.experience} and Type: ${this.type}`)
-    }
-}
+//     getData = () =>{
+//         console.log(`${this.getDetails()} and Experience ${this.experience} and Type: ${this.type}`)
+//     }
+// }
 
-const john = new Pilot('Muyiwa Olalekan', 1988, 20, 'Private', 'TC1234');
+// const john = new Pilot('Muyiwa Olalekan', 1988, 20, 'Private', 'TC1234');
 
-console.log(john);
+// console.log(john);
 
-john.getData();
+// john.getData();
+
+//working with Promises
+
+const postListPromise = new Promise((resolve, reject) => {
+    $.get('https://jsonplaceholder.typicode.com/posts',(data) =>{
+        console.log('GET POSTS LIST Response => ', data);
+        resolve(data);
+    }).fail(err =>{
+        reject(new Error(`Call failed for GET POST List Request with status ${err.status}`))
+    })
+})
+
+postListPromise
+.then((response) =>{
+    console.log('call success');
+    console.log('Then Response => ', response);
+})
+.catch((error) => {
+    console.log('call failed');
+    console.log('Catch Error => ', error);
+})
