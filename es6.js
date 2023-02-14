@@ -145,14 +145,40 @@ let newArr = mArr.map((data, pos) => {
 
 //Arrow function: find() and findIndex()
 
-const numArr = [-1, -2, -3, -4, 1, 2, 3, 4]
+// const numArr = [-1, -2, -3, -4, 1, 2, 3, 4]
 
-// const result = numArr.find(item => {
-//     return item % 2 === 0 && item >= 0;
+// // const result = numArr.find(item => {
+// //     return item % 2 === 0 && item >= 0;
+// // })
+
+// const result = numArr.findIndex(item => {
+//     return item % 2 !== 0 && item >= 0;
 // })
 
-const result = numArr.findIndex(item => {
-    return item % 2 !== 0 && item >= 0;
-})
+// console.log('Result =>', result);
 
-console.log('Result =>', result);
+//classes in ES6
+
+// function Person(name, birthYear){
+//     this.name = name;
+//     this.yearOfBirth = birthYear;
+
+//     this.getDetails = function(){
+//         return "Name: " + this.name + " and Age: " + (2023 - this.yearOfBirth)
+//     }
+// }
+
+class Person{
+    constructor(name, birthYear){
+        this.name = name;
+        this.yearOfBirth = birthYear;
+    }
+
+    getDetails = () => {
+        return `Name: ${this.name } and Age: ${2023 - this.yearOfBirth}`
+    }
+}
+
+var muyiwa = new Person('Muyiwa', 1988);
+
+console.log(muyiwa.getDetails());
