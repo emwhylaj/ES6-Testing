@@ -168,6 +168,23 @@ let newArr = mArr.map((data, pos) => {
 //     }
 // }
 
+// class Person{
+//     constructor(name, birthYear){
+//         this.name = name;
+//         this.yearOfBirth = birthYear;
+//     }
+
+//     getDetails = () => {
+//         return `Name: ${this.name } and Age: ${2023 - this.yearOfBirth}`
+//     }
+// }
+
+// var muyiwa = new Person('Muyiwa', 1988);
+
+// console.log(muyiwa.getDetails());
+
+//Inheritance in ES6
+
 class Person{
     constructor(name, birthYear){
         this.name = name;
@@ -179,6 +196,21 @@ class Person{
     }
 }
 
-var muyiwa = new Person('Muyiwa', 1988);
+class Pilot extends Person{
+    constructor(name, birthYear, exp, type, license){
+        super(name, birthYear);
+        this.experience = exp;
+        this.type = type;
+        this.license = license;
+    }
 
-console.log(muyiwa.getDetails());
+    getData = () =>{
+        console.log(`${this.getDetails()} and Experience ${this.experience} and Type: ${this.type}`)
+    }
+}
+
+const john = new Pilot('Muyiwa Olalekan', 1988, 20, 'Private', 'TC1234');
+
+console.log(john);
+
+john.getData();
